@@ -1,0 +1,288 @@
+import java.util.*;
+public class zoho1  //decimal to binary,octal,hexa
+{
+    public static void main(String[] args) {
+        int number=37;
+
+        //decimal to binary
+        int n=number;
+        int Binary=0,i=1;
+        while(n!=0)
+        {
+           Binary+=n%2*i;
+           n=n/2;
+           i*=10;
+        }
+        System.out.println("Binary of "+number+" is :" +Binary);
+
+        //decimal to octal
+        n=number;
+        int Octal=0;i=1;
+        while(n!=0)
+        {
+            Octal+=n%8*i;
+            n=n/8;
+            i*=10;
+        }
+        System.out.println("Octal of "+number+" is :"+Octal);
+
+        //decimal to hexa
+        n=number;
+        String Hexa="";
+        while(n!=0)
+        {
+        int Value=n;
+          Value=n%16;
+            if(Value==10)
+            {
+                Hexa+="A";
+            }
+            else if(Value==11)
+            {
+                Hexa+="B";
+            }
+             else if(Value==12)
+            {
+                Hexa+="C";
+            }
+             else if(Value==13)
+            {
+                Hexa+="D";
+            }
+             else if(Value==14)
+            {
+                Hexa+="E";
+            }
+             else if(Value==15)
+            {
+                Hexa+="F";
+            }
+            else
+            {
+                Hexa+=String.valueOf(Value);
+            }
+            n/=16;
+        }
+        System.out.println("Hexa of "+number+" is :"+Hexa);
+        
+    }
+    
+}
+//---------------------------------------------------------------------------------------
+ class zoho2 //circumference of square
+{
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        System.out.print("Enter the side of square : ");
+        int a=sc.nextInt();
+        int Cir=4*a;
+        System.out.println("Circumference of Square: "+Cir);
+        
+    }
+}
+//------------------------------------------------------------------------------------------
+class zoho3 //circumferce of rectangle
+{
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        System.out.println( "Enter the breath & height of Rectangle:");
+        int b=sc.nextInt();
+        int h=sc.nextInt();
+        int Cir=2*(b+h);
+        System.out.println("Circumference of Rectangle: "+Cir);
+    }
+}
+//--------------------------------------------------------------------------------------------
+class zoho4  //circumference of Cylinder
+{
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Enter the Radius: ");
+        double r=sc.nextDouble();
+        double Cir=2*3.14*r;
+        System.out.println("Circumference of Cylinder : "+Cir);
+    } 
+}
+//-------------------------------------------------------------------------------------------
+class zoho5 //division and addition table
+{
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Enter the number");
+        int n=sc.nextInt();
+        System.out.println("Addition table");
+        for(int i=1;i<=10;i++)
+        {
+            System.out.println(n+" + "+i+" = "+(n+i));
+        }
+        System.out.println("----------------------");
+
+        System.out.println("Division Table");
+        for(int i=1;i<=10;i++)
+        {
+            System.err.println(n*i+" / "+n+" = "+i );
+        }
+
+
+    }
+}
+//-----------------------------------------------------------------------------
+class zoho6 //ascii value of character
+{
+    public static void main(String[] args) {
+        char c='A';
+        for(int i=c;i<c+26;i++)
+        {
+            System.out.println(  (char)i +" - "+i);
+        }
+    }
+}
+//--------------------------------------------------------------------------
+class zoho7//Find reminder and quotient
+{
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Enter the Dividend");
+        int D=sc.nextInt();
+        System.out.println("Enter the Divisor");
+        int d=sc.nextInt();
+        int reminder=D%d;
+        int quotient=D/d;
+
+        System.out.println("Reminder : "+reminder+"\nQuotient : "+quotient);
+
+
+    }
+}
+//----------------------------------------------------------------------------------------
+class zoho8 //long & double demonstrate
+{
+    public static void main(String[] args) {
+        long a=32;
+        double A=32;
+        float b=32;
+        System.out.println("long: "+a+"\ndouble: "+A+"\nfloat: "+b);
+    }
+}
+//--------------------------------------------------------------------------------------
+class zoho9//swapping two numbers
+{
+    public static void main(String[] args) {
+        int a=30;
+        int b=50;
+        System.out.println("Before Swap a="+a+" b="+b);
+        a=a^b;
+        b=a^b;
+        a=a^b;
+        System.out.println("After Swap a="+a+" b="+b);
+    }
+}
+//-------------------------------------------------------------------------------------------
+class zoho10 //check even or odd
+{
+    public static void main(String[] args) {
+        int n =19;
+        if(n%2==0)
+        {
+          System.out.println(n+" is an Even number");
+        }
+        else
+        {
+            System.out.println(n+ " is a Odd number");
+        }
+    }
+}
+//------------------------------------------------------------------------------------------
+class zoho11 //check vowel or consonent
+{
+    public static void main(String[] args) {
+        char ch='u';
+        if(ch=='a' || ch=='e' || ch=='i' || ch=='o' || ch=='u' || ch=='A' || ch=='E'|| ch=='I' || ch=='O' ||ch=='U')
+        {
+            System.out.println(ch+ "  is a vowel");
+        }
+        else
+        {
+            System.out.println(ch+ " is a consonent");
+        }
+    }
+}
+//---------------------------------------------------------------------------------------------
+class zoho12
+{
+    public static void main(String[] args) {
+        int a=10;
+        int b=9;
+        int c=56;
+        int d=3;
+        if(a>b && a>c && a>d)
+        {
+            System.out.println(a+" is the largest number");
+
+        }
+        else if(b>c && b>d && b>a)
+         {
+            System.out.println(b+" is the largest number");
+        }
+        else if(c>b && c>a && c>d )
+        {
+            System.out.println(c+ " is the largest number");
+        }
+        else
+        {
+            System.out.println(d+ " is the largest number");
+        }
+    }
+}
+//------------------------------------------------------------------------------------------
+class zoho13 //roots of quodratic equation
+{
+    public static void main(String[] args) {
+        int a=10;
+        int b=7;
+        int c=3;
+        System.out.println("The Quodratic Equation "+a+"x*x + "+b+"x + "+c);
+        if((b*b)-(4*a*c) >0)
+        {
+            System.out.println("The Equation is real");
+        }
+        else if((b*b)-(4*a*c) <0)
+        {
+             System.out.println("The Equation is imaginary");
+        }
+        else
+        {
+            System.out.println("The Equation is equal");
+        }
+    }
+}
+//------------------------------------------------------------------------------
+class zoho14 //positive or negative
+{
+    public static void main(String[] args) {
+        int a=-54;
+        if(a>0)
+        {
+            System.out.println(a+" is a positive integer");
+        }
+        else
+        {
+            System.out.println(a+" is a negative integer");
+        }
+    }
+}
+//----------------------------------------------------------------------------------
+class zoho15 //check alphabet or not
+{
+    public static void main(String[] args) {
+        char ch=',';
+        if((ch>='a' && ch<='z') || ch>='A' &&  ch<='Z')
+        {
+          System.out.println(ch+ " is an Alphabet");
+        }
+        else
+        {
+            System.out.println(ch+" is not an Alphabet");
+        }
+    }
+}//---------------------------------------------------------------------------------
