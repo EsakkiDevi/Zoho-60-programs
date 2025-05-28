@@ -286,3 +286,120 @@ class zoho15 //check alphabet or not
         }
     }
 }//---------------------------------------------------------------------------------
+class zoho16 //sum of natural numbers and find smallest digit of sum
+{
+    public static void main(String[] args) {
+        int n=11;
+        int sum=(n*(n+1))/2;
+       System.out.println("sum of "+n+" numbers "+sum);
+       int small=9;
+       while(sum>0)
+       {
+        int digit=sum%10;
+        small=Math.min(small,digit);
+        sum=sum/10;
+       }
+       System.out.println("The smallest digit in th sum "+small);
+    }
+}
+//-----------------------------------------------------------------
+class zoho17 //conditional Operator(if-else)
+{
+    public static void main(String[] args) {
+        int a=10;
+        int b=56;
+        if(a<b)
+        {
+            System.out.println("The smallest "+a);
+        }
+        else
+        {
+            System.out.println("The smallest "+b);
+        }
+    }
+}
+//-------------------------------------------------------------------------------------
+class  zoho18 //space between concentric circle
+{
+public static void main(String[] args) {
+    int Radius=35;
+    int radius=30;
+    double Area=2*3.14*Radius;
+    double area=2*3.14*radius;
+
+    double Space=Area-area;
+    System.out.println("Space between Concentric Circles: "+Space);
+}
+}
+//--------------------------------------------------------------------------------------
+class zoho19  //increment decrement operations
+{
+public static void main(String[] args) {
+    int a=10;
+    int b=5;
+    int result=++a - --b;
+   System.out.println("++a - --b  = "+result);
+
+    a=10;
+    b=5;
+    result= a-- % b++;
+    System.out.println("a-- % b++ = "+result);
+
+    a=10;
+    b=5;
+    result=a*=b+=5;
+   System.out.println("a*=b+=5  ="+result);
+  
+   result=69>>>2;
+   System.out.println("69>>>2  = " +result);
+}
+}
+//-------------------------------------------------------------------------------
+class zoho20 //a=28 find (a+=++a + ++a + --a + a--)
+{
+public static void main(String[] args) {
+    int a=28;
+    a+=++a + ++a + --a + a--;
+    System.out.println("a = "+a);
+}
+}
+//------------------------------------------------------------------------------
+class zoho21 //Evaluate (x=++x*2+3*--x)
+{
+public static void main(String[] args) {
+    int x=10;
+    x=++x*2+3*--x;
+    System.out.println("x = "+x);
+
+}
+}
+//---------------------------------------------------------------------------------
+class zoho22 //Evaluate y=10,  z=(++y * (y++ + 5))
+{
+public static void main(String[] args) {
+    int y=10;
+    int z=(++y * (y++ + 5));
+    System.out.println("z = "+z);
+
+}
+}
+//------------------------------------------------------------------------------------
+class zoho24 //Evaluate x=5 find x1=++x - x++ + --x
+{
+public static void main(String[] args) {
+int x=5;
+int x1=++x - x++ + --x;
+System.out.println("x1 = "+x1);
+    
+}
+}
+//----------------------------------------------------------------------------------------
+class zoho25 //evaluate final keyword
+{
+public static void main(String[] args) {
+    final int a=100;
+    //System.out.println(++a); this makes compile error
+    System.out.println(a);
+}
+}
+//--------------------------------------------------------------------------------------
