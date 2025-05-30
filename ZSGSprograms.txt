@@ -71,7 +71,7 @@ public class zoho1  //decimal to binary,octal,hexa
 //---------------------------------------------------------------------------------------
  class zoho2 //circumference of square
 {
-    public static void main(String[] args) {
+     public static void main(String[] args) {
         Scanner sc=new Scanner(System.in);
         System.out.print("Enter the side of square : ");
         int a=sc.nextInt();
@@ -403,3 +403,196 @@ public static void main(String[] args) {
 }
 }
 //--------------------------------------------------------------------------------------
+class zoho26// merged array,repeated array
+{
+    public static void main(String[] args) {
+        int a[]={2,3,5,6,7,8,11,13};
+        int b[]={2,3,4,5,6,7,8,9,10,15};
+        int n=a.length;
+        int m=b.length;
+        int[] merged=new int[n+m];
+        int j=0;
+        for(int i=0;i<n;i++)
+        {
+            merged[j++]=a[i];
+        }
+        for(int i=0;i<m;i++)
+        {
+            merged[j++]=b[i];
+        }
+        Arrays.sort(merged);
+        int k=0,l=0;
+        int[] repeat=new int[j];
+        for(int i=1;i<j;i++)
+        {
+            if(merged[i]!=merged[i-1])
+            {
+                merged[k++]=merged[i-1];
+            }
+            else if(merged[i]==merged[i-1])
+
+            {
+              repeat[l++]=merged[i-1];
+            }
+        }
+        System.out.println("Merged Array");
+        for(int i=0;i<k;i++)
+        {
+            System.out.print(merged[i]+" ");
+        }
+        System.err.println();
+        System.out.println("Repeated element");
+        for(int i=0;i<l;i++)
+        {
+           System.out.print(repeat[i]+" ");
+        }
+    }
+}
+//----------------------------------------------------------------------------------
+class zoho27//rotate multidimensional array(right)
+{
+    public static void main(String[] args) {
+        int a[][]={{1,2},{3,4}};
+        int n=a.length;
+        int m=a[0].length;
+        int[][] rotate=new int[n][m];
+        for(int i=0;i<n;i++)
+        {
+            for(int j=0;j<m;j++)
+            {
+                rotate[j][2-i-1]=a[i][j];
+            }
+        }
+        for(int i=0;i<n;i++)
+        {
+            for(int j=0;j<m;j++)
+            {
+                System.out.print(rotate[i][j]+" ");
+            }
+            System.out.println();
+        }
+    
+
+
+    }
+}
+//------------------------------------------------------------------
+class zoho28//rearrage array first least element then maximum element order
+{
+    public static void main(String[] args) {
+        int[] nums={2,1,3,7,5,6,4};
+        Arrays.sort(nums);
+        int[] rearrange=new int[nums.length];
+       int i=0,j=nums.length-1;
+       int k=0;
+        while(i<j)
+        {
+            rearrange[k++]=nums[i];
+            rearrange[k++]=nums[j];
+            i++;
+            j--;
+        }
+        for(i=0;i<k;i++)
+        {
+            System.out.print(rearrange[i]+" ");
+        }
+    }
+}//------------------------------------------------------------------
+class zoho29//factorial ofan number & reverse that factorial number
+{
+    public static void main(String[] args) {
+        int n=5;
+        int fact=1;
+        while(n>0)
+        {
+            fact=fact*n;
+            n--;
+        }
+        System.out.println("Factorial of "+n+" is "+fact);
+        int num=fact;
+        int rev=0;
+        while(num>0)
+        {
+            int digit=num%10;
+            rev=rev*10+digit;
+            num=num/10;
+        }
+        System.out.println("Reverse of Factorial Number: "+rev);
+
+    }
+
+}
+//----------------------------------------------------------
+class zoho30 //sum  of even position element
+{
+    public static void main(String[] args) {
+            int[] nums={1,3,4,2,5,6,7,8,9};
+            int sum=0;
+            for(int i=0;i<nums.length;i++)
+            {
+                if(i%2==0)
+                {
+                    sum+=nums[i];
+                }
+            }
+            System.out.println("sum of even position element "+sum);
+    }
+}
+//------------------------------------------------------------------
+class zoho31//sum  of odd position element
+{
+    public static void main(String[] args) {
+            int[] nums={1,3,4,2,5,6,7,8,9};
+            int sum=0;
+            for(int i=0;i<nums.length;i++)
+            {
+                if(i%2!=0)
+                {
+                    sum+=nums[i];
+                }
+            }
+            System.out.println("sum of odd position element "+sum);
+    }
+}
+//-------------------------------------------------------------------
+class zoho32//second largest number
+{
+    public static void main(String[] args) {
+            int[] nums={1,3,4,2,5,6,7,8,9};
+            Arrays.sort(nums);
+            System.out.println("Second largest number: "+nums[nums.length-2]);
+    }
+}
+//------------------------------------------------------------------------
+class zoho33//second smallest number
+{
+    public static void main(String[] args) {
+            int[] nums={1,3,4,2,5,6,7,8,9};
+            Arrays.sort(nums);
+            System.out.println("Second smallest number: "+nums[1]);
+    }
+}
+//-----------------------------------------------------------------------------------
+class zoho34//number of elements in array
+{
+    public static void main(String[] args) {
+            int[] nums={1,3,4,3,4,5,6,7,2,5,6,7,8,9};
+           
+            System.out.println("Numbers of elements present in array "+nums.length);
+    }
+}
+//-----------------------------------------------------------------------------------
+class zoho35//copy one array to another array
+{
+    public static void main(String[] args) {
+            int[] nums={1,3,4,3,4,5,6,7,2,5,6,7,8,9};
+            int[] copy=new int[nums.length];
+            for(int i=0;i<nums.length;i++)
+            {
+              copy[i]=nums[i];
+              System.out.print(copy[i]+" ");
+            }
+            
+    }
+}
+//---------------------------------------------------------------------------------------
