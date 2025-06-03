@@ -595,4 +595,121 @@ class zoho35//copy one array to another array
             
     }
 }
-//---------------------------------------------------------------------------------------
+//------------------------------------------------------------------------------------------
+class zoho36//frequency of an array elements
+{
+    public static void main(String[] args) {
+        int[] arr = {1,1,1,6};
+      int[] freq = new int[arr.length];
+  
+      for (int i = 0; i < arr.length; i++) 
+      {
+        freq[i] = 1;
+        for (int j = 0; j < i; j++)
+        
+         {
+          if (arr[i] == arr[j]) 
+          {
+            freq[i] = freq[j] + 1;
+            freq[j] = 0;
+          }
+         }
+        }
+      for (int i = 0; i < arr.length; i++) 
+      {
+        if (freq[i] != 0) 
+        {
+          System.out.println( arr[i] + " -> " + freq[i]);
+        }
+      }
+    }
+}
+//--------------------------------------------------------------------------------
+class zoho37//reverse of an array element
+{
+    public static void main(String[] args) {
+        String names[]={"Abi","Bala","Dinesh","Mani","Kumar"};
+        System.out.println("Original Array");
+        for(int i=0;i<names.length;i++)
+        {
+            System.out.print(names[i]+" ");
+        }
+        System.out.println("");
+        System.out.println("Reverse of Array");
+        for(int i=names.length-1;i>=0;i--)
+        {
+            System.out.print(names[i]+" ");
+        }
+    }
+}
+//-----------------------------------------------------------------
+class zoho38 //delete the the element from array;
+{
+    public static void main(String[] args) {
+        int nums[]={1,2,3,4,5,6,7,8};
+        int delete=5;
+        System.out.println("before Deleting "+delete);
+        for(int i=0;i<nums.length;i++)
+        {
+            System.out.print(nums[i]+" ");
+        }
+        int num[]=new int[nums.length-1];
+        int j=0;
+        for(int i=0;i<nums.length;i++)
+        {
+            if(nums[i]!=delete)
+            {
+            num[j++]=nums[i];
+            }
+        }
+        System.out.println("");
+        System.out.println("After deleting "+delete );
+        for(int i=0;i<j;i++)
+        {
+            System.out.print(num[i]+" ");
+        }
+    }
+}
+
+//-----------------------------------------------------------------
+class zoho39//Average ofan array element
+{
+    public static void main(String[] args) {
+        int nums[]={1,2,3,4,5,6,7,8};
+        int sum=0;
+        for(int i=0;i<nums.length;i++)
+        {
+            System.out.print(nums[i]+" ");
+            sum+=nums[i];
+        }
+        System.out.println("");
+        int avg=sum/nums.length;
+        System.out.println("Average: "+avg);
+
+    }
+}
+//-----------------------------------------------------------------------------
+class zoho40//inverse of array element
+{
+    public static void main(String[] args) {
+        int nums[]={1,2,3,4};
+        double[] inver=new double[nums.length];
+        
+        for(int i=0;i<nums.length;i++)
+        {
+            if(nums[i]!=0)
+            {
+                inver[i]= 1.0/nums[i];
+            }
+            else
+            {
+                System.out.println("zero couldnot be inversible");
+            }
+        }
+        for(double n:inver)
+        {
+            System.out.print(n+" ");
+        }
+    }
+}
+//---------------------------------------------------------------------------------------------------
