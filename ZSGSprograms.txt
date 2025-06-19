@@ -838,6 +838,32 @@ class zoho45
 {
     public static void main(String args[])
     {
+                String input = "12345";
+        int n = input.length();
+
+        for (int i = 0; i < n; i++) {
+            // Add leading spaces
+            for (int s = 0; s < i; s++) {
+                System.out.print(" ");
+            }
+
+            // Print left side digit
+            System.out.print(input.charAt(i));
+
+            // Calculate space between two digits
+            int spacesBetween = 2 * (n - i - 1) - 1;
+
+            // Only print right side digit if not the middle digit
+            if (spacesBetween >= 0) {
+                for (int s = 0; s < spacesBetween; s++) {
+                    System.out.print(" ");
+                }
+                System.out.print(input.charAt(i));
+            }
+
+            System.out.println();
+        }
+
 
     }
 }
@@ -955,3 +981,187 @@ class zoho50//numbers in words
     }
 
 }
+//-----------------------------------------------------------------------------------------------------------------
+class zoho51//odd position elements in descending order otherin their position in ascendingorder
+{
+    public static void main(String[] args) {
+        int[] nums={13,2,4,15,12,10,5};
+        int[] n1=new int[nums.length];
+        int k=0,l=0;
+        int[] n2=new int[nums.length];
+
+        for(int i=0;i<nums.length;i++)
+        {
+            if(i%2==0)
+            {
+                n1[k++]=nums[i];
+              
+            }
+            else
+            {
+                n2[l++]=nums[i];
+            }
+        }
+       
+
+        
+       for(int i=0;i<k;i++)
+       {
+        for(int j=i+1;j<k;j++)
+        {
+        if(n1[i]<n1[j])
+        {
+           int temp=n1[i];
+           n1[i]=n1[j];
+           n1[j]=temp;
+        }
+       }
+    }
+
+    for(int i=0;i<l;i++)
+    {
+        for(int j=i+1;j<l;j++)
+        {
+            if(n2[i]>n2[j])
+            {
+                int temp=n2[i];
+                n2[i]=n2[j];
+                n2[j]=temp;
+            }
+        }
+    }
+    
+       
+        
+        int m=0;
+        for(int i=0;i<k;i++)
+        {
+            nums[m]=n1[i];
+            m=m+2;
+        }
+        m=1;
+         for(int i=0;i<l;i++)
+        {
+           nums[m]=n2[i];
+           m=m+2;
+        }
+      
+       
+        for(int n:nums)
+        {
+            System.out.print(n+" ");
+        }
+
+    }
+}
+//-----------------------------------------------------------------------------------------
+class zoho52//c star printing
+{
+    public static void main(String[] args) {
+        int n=4;
+        for (int i=0;i<n;i++)
+        {
+            for(int j=0;j<n;j++)
+            {
+                if(i==0 ||j==0 || i==n-1)
+                {
+                    System.out.print("* ");
+                }
+               
+            }
+             System.out.println();
+        }
+    }
+}
+//---------------------------------------
+class zoho53//12345678910 pyramid
+{
+    public static void main(String[] args) {
+        int n=10;
+        int count=1;
+        int row=1;
+        while(count<=n)
+        {
+            for(int s=0;s<n-row;s++)
+            {
+                System.out.print(" ");
+            }
+
+            for(int j=0;j<row && count<=n;j++)
+            {
+                System.out.print(count+" ");
+                count++;
+            }
+            System.out.println();
+            row++;
+        }
+    }
+
+}
+//-------------------------------------------------------------------
+class zoho54// X-pattern 12345
+{
+    public static void main(String[] args) {
+     int n=5;
+     for(int i=1;i<=n;i++)
+     {
+        for(int j=1;j<=n;j++)
+        {
+            if(i==j)
+            {
+                System.out.print(i);
+            }
+            else if(i+j==n+1)
+            {
+                System.out.print(i);
+            }
+            else
+            {
+                System.err.print(" ");
+            }
+        }
+        System.out.println();
+     }   
+    }
+}
+//-------------------------------------------------------------
+class zoho55//box printing 44444
+{
+    public static void main(String[] args) {
+        int n=4;
+        int size=n*2-1;
+        for(int i=0;i<size;i++)
+        {
+            for(int j=0;j<size;j++)
+            {
+                int min= Math.min(Math.min(i,j),Math.min(size-1-i,size-1-j));
+                System.out.print((n-min ) + " ");
+            }
+            System.out.println();
+        }
+        
+    }
+}
+
+
+
+
+//-------------------------------------------------------------
+class zoho56//bprint substring without string
+{
+    public static void main(String[] args) {
+        char[] word={'a','b','c'};
+        for(int i=0;i<word.length;i++)
+        {
+            for(int j=i;j<word.length;j++)
+            {
+                for(int k=i;k<=j;k++)
+                {
+                    System.out.print(word[k]);
+                }
+                System.out.println();
+            }
+        }
+    }
+}
+//--------------------------------------------
